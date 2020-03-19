@@ -23,6 +23,7 @@ html { scroll-padding-top: 100px; /* height of sticky header */ }
 body {
   background: white;
   font-family: 'Sulphur Point', sans-serif;
+  margin: 0;
 }
 
 /* header */
@@ -48,14 +49,15 @@ nav {
 nav a {
   text-decoration: none;
   font-weight: bold;
+  color: black;
 }
-
 
 .container {
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
 }
+
 
 /* hero */
 #hero {
@@ -67,23 +69,23 @@ nav a {
   height: 200px;
   margin-top: 100px;
 }
-
 #hero h1 {
   word-wrap: break-word;
   text-align: center; 
 }
-
+form {
+  max-width: 300px;
+  width: 100%;
+}
 #hero input[type='email'] {
   width: 100%;
   padding: 5px;
   border-radius: 6px;
   background: var(--color3)
 }
-
 input:focus {
   outline: none;
 }
-
 .btn {
   width: 100%;
   height: 30px;
@@ -139,10 +141,12 @@ input:focus {
 .feature-4 {background: var(--c4);}
 .feature {
   color: white;
-  flex-basis: 1/4;
+  flex-basis: 25%;
 }
 .feature a {color: white;}
-.feature-card {padding: 130px 20px;}
+.feature-card {padding: 130px 20px; height: 450px;}
+#features a {text-decoration: none;}
+
 
 /* feature-banners */
 .feature-banner {
@@ -166,7 +170,7 @@ input:focus {
 .feature-banner-symbol { 
   top: 170px; left: 1030px; 
   background-color: white;
-  padding: 50px;
+  padding: 100px;
   border-radius: 50%;
   position: absolute;
 }
@@ -185,8 +189,9 @@ input:focus {
 /* peace */
 #peace-0 { color: var(--c1); }
 #peace-1 { top: -350px; left: 850px; } /* peace */
-#peace-2 { top: -60px; left: 1050px; } /* spock */
+#peace-2 { top: -10px; left: 1050px; } /* spock */
 #peace-3 { top: -340px; left: 1000px; } /* dove */
+#peace-4 { top: -130px; left: 700px; } /* flag */
 /* love */
 #love-0 { color: var(--c2); }
 #love-1 { top: -400px; left: 1080px; } /* in love s */
@@ -203,7 +208,7 @@ input:focus {
 #respect-0 { color: var(--c4); }
 #respect-1 { top: -100px; left: 800px; } /* users */
 #respect-2 { top: -380px; left: 800px; } /* user check */
-#respect-3 { top: 150px; left: 1100px; } /* smile */
+#respect-3 { top: -150px; left: 1100px; } /* praying-hands */
 #respect-4 { top: 50px; left: 800px; } /* hand-shake */
 /* icon animations */
 @keyframes icon-anim {
@@ -259,6 +264,10 @@ input:focus {
   flex-basis: 25%; 
   height: 500px;
   padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 #prices .description {
   border: 1px solid black;
@@ -266,33 +275,88 @@ input:focus {
 }
 
 
+/* alternatives */
+#alternatives {
+  margin-top: 20px;
+  background-color: var(--c5);
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+#alternatives > div {flex-basis: 50%;}
+
+
+/* footer  */
+footer {
+  height: 100%;
+  background-color: var(--c5);
+}
+.footer-container {
+  max-width: 1500px;
+  margin: auto;
+  text-align: center;
+}
+footer p {
+  margin: 0; 
+  height: 30px;
+  line-height: 30px;
+}
+footer a {
+  color: var(--c2);
+  text-decoration: none;
+  /* font-weight: bold; */
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+
 /* responsive */
-@media (max-width: 650px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+  .container {
+    padding: 10px;
+  }
+  
   header {
     flex-wrap: wrap;
   }
-  #logo {
-    margin-top: 15px;
-    width: 100%;
-    margin-left: 0px;
-/*     position: relative; */
-  }
-  #logo img {
-    margin: 0 auto;
-  }
-  nav {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 50px;
-  }
-  nav li {
-    padding-bottom: 5px;
-  }
+
   #hero {
-    margin-top: 120px;
+    margin-top: 80px;
+    height: 100%;
   }
-} 
+  #hero h1 {
+    font-size: medium;
+    text-align: left;
+  }
+  form {
+    max-width: 100%;
+  }
+
+  #presenting {
+    font-size: large;
+    padding: 0;
+    text-align: right;
+  }
+
+  #features {
+    display: grid;
+  }
+  .feature-card {
+    padding: 15px;
+    height: 120px;
+  }
+  .feature-card .description {
+    display: none;
+  }
+
+  .feature-banner {
+    padding: 10px;
+  }
+  .feature-banner p {
+    
+  }
+}
