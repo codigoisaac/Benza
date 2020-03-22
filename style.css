@@ -319,9 +319,13 @@ footer a:hover {
   .container {
     padding: 10px;
   }
-  
+
+  /* header */
   header {
     flex-wrap: wrap;
+  }
+  .header-container {
+    flex-direction: column;
   }
 
   #hero {
@@ -356,7 +360,10 @@ footer a:hover {
   .feature-banner {
     padding: 10px;
   }
-  .feature-banner p {
-    
+  .feature-banner-title {
+    transform: rotate(-90deg);
+    font-size: 6rem;
+    margin: 0;
+    line-height: 90px;
   }
 }
