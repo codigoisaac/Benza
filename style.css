@@ -35,13 +35,13 @@ header {
   top: 0; left: 0;
   width: 100%; height: 85px;
   z-index: 100;
-  padding: 15px;
 }
 header a {text-decoration: none; color: black;}
 .header-container {
   display: flex;
   align-items: center; /*vertical*/
   justify-content: space-between; /*horizontal*/
+  padding: 15px;
 }
 #logo {font-size: 40px;}
 nav {
@@ -53,6 +53,12 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   color: black;
+}
+#header-bottom-line {display: flex;}
+.hb-line {
+  flex-basis: 25%; 
+  height: 3px;
+  position: relative;
 }
 
 .container {
@@ -138,10 +144,10 @@ input:focus {
   text-align: center;
   margin-bottom: 30px;
 }
-.feature-1 {background: var(--c1);}
-.feature-2 {background: var(--c2);}
-.feature-3 {background: var(--c3);}
-.feature-4 {background: var(--c4);}
+.c1-bg {background: var(--c1);}
+.c2-bg {background: var(--c2);}
+.c3-bg {background: var(--c3);}
+.c4-bg {background: var(--c4);}
 .feature {
   color: white;
   flex-basis: 25%;
@@ -301,11 +307,9 @@ footer a:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   
-
   .container {
     padding: 10px;
   }
-
 
   /* header */
   header {padding: 0; height: 100px;}
@@ -317,7 +321,9 @@ footer a:hover {
     justify-content: space-evenly;
     margin-top: 5px;
   }
-
+  #header-bottom-line {
+    margin-top: -3px;
+  }
 
   /* hero */
   #hero {
@@ -332,14 +338,12 @@ footer a:hover {
     max-width: 100%;
   }
 
-
   /* presenting */
   #presenting {
     font-size: large;
     padding: 0;
     text-align: right;
   }
-
 
   /* features */
   #features {
@@ -352,7 +356,6 @@ footer a:hover {
   .feature-card .description {
     display: none;
   }
-
   
   /* feature-banners */
   .feature-banner {
@@ -367,67 +370,81 @@ footer a:hover {
     margin: 0;
     line-height: 70px;
   }
-  .feature-banner p {
-    position: static;
-  }
+  .feature-banner p {position: static;}
   .feature-banner-symbol { 
     position: static;
     font-size: 2em;
     padding: 15px;
+    left: 150px;
+    margin-bottom: 10px;
   }
-  /* positioning feature banner titles */
-  /* #peace .feature-banner-title {top: 340px; right: 60px;}
-  #love .feature-banner-title {top: 290px; right: 20px;}
-  #unity .feature-banner-title {top: 380px; right: 100px;}
-  #respect .feature-banner-title {top: 300px; right: 20px;} */
-  
-  /* positioning feauture banner paragraphs */
-  /* #peace p {top: 260px;}
-  #love p {top: 180px;}
-  #unity p {top: 310px;}
-  #respect p {top: 400px;} */
-
-  /* positioning symbols */
-  .feature-banner-symbol {left: 150px;}
-  #peace-0 {top: -600px;}
-  #love-0 {top: -2600}
-
-  /* positioning icons */
-  /* peace */
-  .feature-banner-icon {font-size: 3rem; display: none;}
-  #peace-1 { top: -350px; left: 50px; } /* peace */
-  #peace-2 { top: -230px; left: 190px; } /* spock */
-  #peace-3 { top: -390px; left: 170px; } /* dove */
-  #peace-4 { top: -280px; left: -45px; } /* flag */
-  /* love */
-  #love-1 { top: -350px; left: 80px; } /* in love s */
-  #love-2 { top: -350px; left: 250px; } /* in love r */
-  #love-3 { top: -450px; left: 150px; } /* hand */
-  #love-4 { top: -400px; left: -120px; } /* kiss */
-  /* unity */
-  #unity-1 { top: -250px; left: 100px; } /* infinite */
-  #unity-2 { top: -350px; left: 220px; } /* globe */
-  #unity-3 { top: -320px; left: 90px; } /* om */
-  #unity-4 { top: -200px; left: 90px; } /* glasses */
-  /* respect */
-  #respect-0 { color: var(--c4); }
-  #respect-1 { top: -100px; left: 80px; } /* users */
-  #respect-2 { top: -180px; left: 180px; } /* user check */
-  #respect-3 { top: -150px; left: -120px; } /* praying-hands */
-  #respect-4 { top: 50px; left: 80px; } /* hand-shake */
-
+  .feature-banner-icon {display: none;}
 
   /* warnings */
   #warnings {padding: 20px;}
   #warning-info {flex-direction: column;}
 
-  
   /* prices */
   #prices {flex-direction: column;}
-
+  #prices .description {padding: 0 1.2rem;}
 
   /* alternatives */
   #alternatives {flex-direction: column;}
+}
 
+/* Small devices (portrait tablets and large phones, 600px to 992px) */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
 
+  /* presenting */
+  #presenting {
+    padding: 1.1rem;
+    font-size: 2rem;
+  }
+  
+  /* feature-banner */
+  /* title */
+  .feature-banner-title {
+    line-height: 7rem;
+    font-size: 6rem;
+  }
+  /* symbols */
+  .feature-banner-symbol {
+    left: 35rem;
+    top: 27rem;
+    padding: 2rem;
+    font-size: 7rem;
+  }
+  /* icons */
+  .feature-banner-icon {font-size: 3rem;}
+  /* peace */
+  #peace-1 { top: -0rem; left: 5rem; } /* peace */
+  #peace-2 { top: -28rem; left: 15rem; } /* spock */
+  #peace-3 { top: -29rem; left: 1rem; } /* dove */
+  #peace-4 { top: 4rem; left: 10rem; } /* flag */
+  /* love */
+  #love-1 { top: -24rem; left: -4rem; } /* in love s */
+  #love-2 { top: 10rem; left: 18rem; } /* in love r */
+  #love-3 { top: -8rem; left: 27rem; } /* hand */
+  #love-4 { top: -3rem; left: 8rem; } /* kiss */
+  /* unity */
+  #unity-1 { top: -29rem; left: 32rem; } /* infinite */
+  #unity-2 { top: 0rem; left: 8rem; } /* globe */
+  #unity-3 { top: -30rem; left: 4rem; } /* om */
+  #unity-4 { top: -20rem; left: 7rem; } /* glasses */
+  /* respect */
+  #respect-1 { top: -20rem; left: 8rem; } /* users */
+  #respect-2 { top: 3rem; left: 8rem; } /* user check */
+  #respect-3 { top: -15rem; left: 24rem; } /* praying-hands */
+  #respect-4 { top: 5rem; left: 8rem; } /* hand-shake */
+
+  /* warnings */
+  #warnings ul, #warnings p {font-size: 1.1rem;}
+  #warning-info {flex-direction: column;}
+
+  /* prices */
+  #prices {flex-direction: column;}
+  #prices .description {
+    padding: 0 1.2rem;
+    font-size: 1.1rem;
+  }
 }
