@@ -22,6 +22,7 @@
 
 html {
   scroll-padding-top: 6rem; /* height of sticky header */
+  scroll-behavior: smooth;
 }
 
 body {
