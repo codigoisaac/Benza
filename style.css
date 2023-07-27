@@ -251,8 +251,8 @@ input:focus {
   left: 45rem;
 } /* peace */
 #peace-2 {
-  top: -10rem;
-  left: 70rem;
+  top: 3rem;
+  left: 10rem;
 } /* spock */
 #peace-3 {
   top: -23rem;
@@ -268,7 +268,7 @@ input:focus {
 }
 #love-1 {
   top: -4rem;
-  left: 70rem;
+  left: 30rem;
 } /* in love s */
 #love-2 {
   top: -1rem;
@@ -300,7 +300,7 @@ input:focus {
 } /* om */
 #unity-4 {
   top: -20rem;
-  left: 70rem;
+  left: 10rem;
 } /* glasses */
 /* respect */
 #respect-0 {
@@ -320,7 +320,7 @@ input:focus {
 } /* praying-hands */
 #respect-4 {
   top: 5rem;
-  left: 60rem;
+  left: 40rem;
 } /* hand-shake */
 /* icon animations */
 @keyframes icon-anim {
